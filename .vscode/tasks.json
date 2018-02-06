@@ -1,0 +1,81 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build current file",
+			"type": "shell",
+			"linux":{
+				"command": "make -f Makefile ${fileBasenameNoExtension}.out"
+			},
+			"windows":{
+				"command": "mingw32-make.exe -f Makefile ${fileBasenameNoExtension}.exe"
+			},
+			"options": {
+				"env": {
+					"CXX": "clang++",
+					"CC": "clang",
+					"CXXFLAGS": "-target x86_64-pc-windows-gnu"
+				}
+			},
+			"problemMatcher": {
+				"owner": "cpp",
+				"fileLocation": [
+					"relative",
+					"${workspaceFolder}"
+				],
+				"pattern": {
+					"regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error|note):\\s+(.*)$",
+					"file": 1,
+					"line": 2,
+					"column": 3,
+					"severity": 4,
+					"message": 5
+				}
+			},
+			"presentation": {
+				"focus": true
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "Clean current file",
+			"type": "shell",
+			"linux":{
+				"command": "make -f Makefile ${fileBasenameNoExtension}.out clean",
+			},
+			"windows":{
+				"command": "mingw32-make.exe -f Makefile ${fileBasenameNoExtension}.exe clean",
+			},
+			"presentation": {
+				"focus": true
+			},
+			"group": "build",
+			"problemMatcher": "$tsc"
+		},
+		{
+			"label": "Run current file",
+			"type": "process",
+			"linux":{
+				"command": "${workspaceFolder}/${fileBasenameNoExtension}.out",
+			},
+			"windows":{
+				"command": "${workspaceFolder}/${fileBasenameNoExtension}.exe",
+			},
+			"args": [
+				// "asdsadsad"
+			],
+			"presentation": {
+				"focus": true
+			},
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			}
+		}
+	]
+}
