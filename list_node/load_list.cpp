@@ -1,6 +1,9 @@
 /**
- * @brief
+ * @brief Part of task 'ListNodes' used to load list from file.
  * @author Dmitriy Gertsog <dmyger@gmail.com>
+ * @date: 2018-02-10
+ *
+ * @details Note: redirect dump of loaded list in file to compare results with original dump.
  *
  */
 #include <iostream>
@@ -15,7 +18,7 @@ int main(int argc, char *argv[])
 	List list;
 	FILE *file = fopen(ListDataFile, "rb");
 	if(file) {
-		list.Desirialize(file);
+		list.Deserialize(file);
 		fclose(file);
 		cout << list;
 	} else {

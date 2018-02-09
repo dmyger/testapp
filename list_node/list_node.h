@@ -1,3 +1,8 @@
+/**
+ * @brief Task implement Serialize & Deserialize in binary formated file following List with Nodes.
+ * @author Dmitriy Gertsog <dmyger@gmail.com>
+ * @date: 2018-02-10
+ */
 #ifndef __LIST_NODE_H__
 #define __LIST_NODE_H__
 #include <string>
@@ -80,7 +85,7 @@ public:
 	}
 
 	/// Load ListNodes from file
-	void Desirialize(FILE *file)
+	void Deserialize(FILE *file)
 	{
 		typedef std::map<size_t, ListNode *> RandMapType;
 		RandMapType rand_map;

@@ -1,6 +1,9 @@
 /**
- * @brief
+ * @brief Part of task 'ListNodes' used to create list. Accept one argument: number of Nodes in List.
  * @author Dmitriy Gertsog <dmyger@gmail.com>
+ * @date: 2018-02-10
+ *
+ * @details Note: redirect dump of created list in file to compare results after load list.
  *
  */
 #include <iostream>
