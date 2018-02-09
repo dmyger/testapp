@@ -13,6 +13,7 @@
 				"command": "mingw32-make.exe -f Makefile ${fileBasenameNoExtension}.exe"
 			},
 			"options": {
+				"cwd": "${fileDirname}",
 				"env": {
 					"CXX": "clang++",
 					"CC": "clang",
@@ -51,6 +52,9 @@
 			"windows":{
 				"command": "mingw32-make.exe -f Makefile ${fileBasenameNoExtension}.exe clean",
 			},
+			"options": {
+				"cwd": "${fileDirname}"
+			},
 			"presentation": {
 				"focus": true
 			},
@@ -66,8 +70,11 @@
 			"windows":{
 				"command": "${workspaceFolder}/${fileBasenameNoExtension}.exe",
 			},
+			"options": {
+				"cwd": "${fileDirname}"
+			},
 			"args": [
-				// "asdsadsad"
+				"AAA BBB CCC ABCsdfjaldsfjhkajdsfkj"
 			],
 			"presentation": {
 				"focus": true

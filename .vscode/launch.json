@@ -9,16 +9,17 @@
 			"type": "cppdbg",
 			"request": "launch",
 			"windows": {
-				"program": "${workspaceFolder}/${fileBasenameNoExtension}.exe",
+				"program": "${fileDirname}/${fileBasenameNoExtension}.exe",
 				"miDebuggerPath": "D:/mingw64/bin/gdb.exe ",
 			},
-			"program": "${workspaceFolder}/${fileBasenameNoExtension}.out",
+			"program": "${fileDirname}/${fileBasenameNoExtension}.out",
 			"args": [
+				"listnode.bin"
 				// "40358940358943058034",
 				// "12345678901234567890"
 			],
 			"stopAtEntry": false,
-			"cwd": "${workspaceFolder}",
+			"cwd": "${fileDirname}",
 			"environment": [],
 			"externalConsole": false,
 			"MIMode": "gdb",

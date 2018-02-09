@@ -1,3 +1,7 @@
 {
-  "files.exclude": {}
+  "files.exclude": {
+    "*.exe": "explorerExcludedFiles",
+    "*.out": "explorerExcludedFiles",
+    "*.o": "explorerExcludedFiles"
+  }
 }
